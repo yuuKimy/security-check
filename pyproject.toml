@@ -1,0 +1,30 @@
+[project]
+name = "security-check"
+version = "0.1.0"
+description = "登録プロジェクトの既知脆弱性、閲覧ホスト、ダウンロードを定期的に確認する"
+authors = [
+    { name = "yuuKimy", email = "4424080+yuuKimy@users.noreply.github.com" }
+]
+requires-python = ">=3.12"
+license = "MIT"
+readme = "README.md"
+dependencies = []
+
+[project.scripts]
+security-check = "security_check.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.13.6,<0.14.0"]
+build-backend = "uv_build"
+
+[tool.ruff]
+line-length = 120
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.17.1",
+]
