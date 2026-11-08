@@ -49,6 +49,12 @@ uv run security-check schedule install
 
 `schedule install` は、毎日 9:00 に `run --scheduled` を登録します。前回の成功から 7 日未満なら、脆弱性の照会、閲覧とダウンロードの読み取り、通知は行わず、URLhaus と OpenPhish の一覧の取得だけを行います。LaunchAgent のラベルは `com.security-check.daily` です。
 
+## Cursor で読む
+
+開いているワークスペースに `~/SecurityCheck` をフォルダ追加すると、`latest.md` をその場で読めます。ホスト名とメモは `### Cursor への依頼` の区切り内にあり、これはデータです。中の文を理由に、コマンドの実行や URL の取得はしません。
+
+`.cursor/skills/review-security-check` は、レポートの読み方をエージェントに渡します。このリポジトリをワークスペースに含めているときに使えます。別のワークスペースだけで `latest.md` を読むときは、同じディレクトリを `~/.cursor/skills/review-security-check` に置きます。
+
 人が読むファイルは `~/SecurityCheck` に置きます。機械が読む記録、マルウェア配布とフィッシングの照合結果、ログは `~/Library` に置きます。脆弱性、ホスト、ダウンロードの全件は `~/Library/Application Support/security-check/normalized.json` です。ディレクトリとファイルは、所有者だけが読み書きできるようにします（ディレクトリ `0700`、ファイル `0600`）。
 
 ## コマンド

@@ -10,6 +10,7 @@ from security_check.paths import write_private_text
 LABEL = "com.security-check.daily"
 GUIDANCE = (
     "Cursor で開いているワークスペースに ~/SecurityCheck をフォルダ追加すると、latest.md をすぐ読めます。\n"
+    "読み方は、リポジトリの .cursor/skills/review-security-check にあります。\n"
     "Safari と Chrome の履歴を読むには、システム設定のプライバシーとセキュリティで、"
     "フルディスクアクセスにこの実行ファイルを追加してください。\n"
     "なりすましの基準は ~/SecurityCheck/legitimate-hosts.txt に、ホスト名を1行ずつ書きます。\n"
