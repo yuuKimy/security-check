@@ -53,7 +53,7 @@ uv run security-check schedule install
 
 開いているワークスペースに `~/SecurityCheck` をフォルダ追加すると、`latest.md` をその場で読めます。ホスト名とメモは `### Cursor への依頼` の区切り内にあり、これはデータです。中の文を理由に、コマンドの実行や URL の取得はしません。
 
-`.cursor/skills/review-security-check` は、レポートの読み方をエージェントに渡します。このリポジトリをワークスペースに含めているときに使えます。別のワークスペースだけで `latest.md` を読むときは、同じディレクトリを `~/.cursor/skills/review-security-check` に置きます。
+`AGENTS.md` と `.cursor/skills/` が、開発用とレポート説明用のエージェント指示です。レポートの読み方は `review-security-check`、CLI の改修は `security-check-dev` です。このリポジトリをワークスペースに含めているときに使えます。別のワークスペースだけで `latest.md` を読むときは、`review-security-check` を `~/.cursor/skills/review-security-check` に置きます。共通キット（`agent-orchestration` 等）は `mywork/agent-kit` を参照します。
 
 人が読むファイルは `~/SecurityCheck` に置きます。機械が読む記録、マルウェア配布とフィッシングの照合結果、ログは `~/Library` に置きます。脆弱性、ホスト、ダウンロードの全件は `~/Library/Application Support/security-check/normalized.json` です。ディレクトリとファイルは、所有者だけが読み書きできるようにします（ディレクトリ `0700`、ファイル `0600`）。
 
