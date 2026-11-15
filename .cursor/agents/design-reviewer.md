@@ -37,3 +37,5 @@ readonly: true
 ## 出力
 
 `design-reviewer` テンプレ形式（重大 / 軽微 / 質問）。
+
+PR マージ直前は **`pr-reviewer`**（`pr-pre-merge-review` skill）。
