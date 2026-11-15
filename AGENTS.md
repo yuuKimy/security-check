@@ -8,7 +8,8 @@ macOS 上で登録プロジェクトの既知脆弱性と、直近 7 日の閲�
 | --- | --- |
 | プロファイル | `standard` |
 | 検証 subagent | `verifier` — 完了宣言・PR 前 |
-| 査読 subagent | `design-reviewer` — 仕様境界・外部送信・レポート形式の変更前 |
+| 設計査読 | `design-reviewer` — 仕様境界・外部送信・レポート形式の変更前 |
+| PR 査読（任意） | `pr-reviewer` — マージ前の第三者レビュー（skill `pr-pre-merge-review`） |
 
 ## 二つの仕事（混ぜない）
 
@@ -23,7 +24,7 @@ macOS 上で登録プロジェクトの既知脆弱性と、直近 7 日の閲�
 
 `~/.cursor/skills/`（`mywork/agent-kit/skills/` から `sync-skills.sh` で同期）:
 
-- `agent-orchestration` / `project-agent-scaffold` / `verify-gate` / `git-workflow`
+- `agent-orchestration` / `project-agent-scaffold` / `verify-gate` / `pr-pre-merge-review` / `git-workflow`
 
 ドメインパック: `pack-security-check`（[agent-kit/packs/pack-security-check.md](../agent-kit/packs/pack-security-check.md)）
 
@@ -46,7 +47,8 @@ macOS 上で登録プロジェクトの既知脆弱性と、直近 7 日の閲�
 | 名前 | readonly | 用途 |
 | --- | --- | --- |
 | `verifier` | はい | pytest / ruff |
-| `design-reviewer` | はい | プライバシー境界・仕様整合 |
+| `design-reviewer` | はい | プライバシー境界・仕様整合（実装前） |
+| `pr-reviewer` | はい | マージ前 PR・レポート方針・untrusted 境界 |
 | `report-reviewer` | はい | レポート説明（作業文脈から切り離す） |
 
 ## ディレクトリ
