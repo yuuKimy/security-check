@@ -11,6 +11,13 @@ description: >-
 
 判断は人がする。説明は、レポートに書いてある事実の範囲に留める。
 
+## agent-kit との位置づけ
+
+- 本 skill は **レポート説明モード**（[AGENTS.md](../../../AGENTS.md) の「二つの仕事」）
+- リポジトリのコード改修 → `security-check-dev` と親エージェント
+- 開発文脈から切り離したいとき → subagent **`report-reviewer`**（本 skill と同じ規則）
+- 共通手順: `~/.cursor/skills/agent-orchestration`
+
 ## ファイル
 
 - レポートは `~/SecurityCheck/latest.md`
